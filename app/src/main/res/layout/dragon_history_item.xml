@@ -1,0 +1,61 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <!-- Imagem do Dragão (quadrado menor) -->
+    <ImageView
+        android:id="@+id/dragonImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Dragon image"
+        android:background="#CCCCCC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Texto Título -->
+    <TextView
+        android:id="@+id/tvLinha1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:maxLines="1"
+        android:text="Titulo"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/dragonImage"
+        app:layout_constraintTop_toTopOf="@id/dragonImage"
+        app:layout_constraintEnd_toStartOf="@id/icDelete" />
+
+    <!-- Texto Descrição -->
+    <TextView
+        android:id="@+id/tvLinha2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:maxLines="3"
+        android:text="Descrição do jogo"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tvLinha1"
+        app:layout_constraintTop_toBottomOf="@id/tvLinha1"
+        app:layout_constraintEnd_toEndOf="@id/tvLinha1" />
+
+    <!-- Ícone de Apagar -->
+    <ImageView
+        android:id="@+id/icDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintStart_toEndOf="@id/tvLinha1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/dragonImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
